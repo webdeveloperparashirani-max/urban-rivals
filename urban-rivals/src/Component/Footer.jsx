@@ -76,7 +76,7 @@ export default function Footer() {
                     © <span>Acute Games, Inc.</span> All rights reserved |
                     <span>Contact us - Terms and Conditions of use - Privacy Policy</span>
                 </p>
-                <p>PEGI 12</p>
+                <p className='copy_text'>PEGI 12</p>
             </div>
 
         </footer>

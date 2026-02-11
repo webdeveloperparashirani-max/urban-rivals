@@ -61,7 +61,7 @@ export default function Hero() {
 
             <div className="char-orange">
                 <div className="char-glow-orange"></div>
-                <img src="/logo.png" className="center-logo" alt="" />
+                <img src="/Logo.png" className="center-logo" alt="" />
             </div>
 
             {/* Play Button */}

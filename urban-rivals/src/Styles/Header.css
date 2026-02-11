@@ -12,7 +12,7 @@
     z-index: 50;
 
     display: flex;
-    gap: 50px;
+    gap: 5vw;
     /* overflow-x: hidden; */
 }
 
@@ -20,14 +20,14 @@
     /* padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 20px; */
-    padding: 10px 0px 30px 20px;
+    padding: 0.8vw 0px 2vw 1.5vw;
     background-image: url('/logo_bg.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-position: 100% -100%; */
 
     img {
-        height: 110px;
+        height: 7vw;
         transition: 0.1s ease-in-out;
     }
 
@@ -40,7 +40,7 @@
 .header-right {
     width: 100%;
     overflow: hidden;
-    padding-left: 200px;
+    padding-left: 20vw;
     background-image: url('/Header_bg.png');
     background-size: 80% 75%;
     background-repeat: no-repeat;
@@ -56,22 +56,22 @@
     color: white;
     font-weight: bolder;
     font-family: Komika, serif;
-    font-size: 18px;
+    font-size: 1.2vw;
 
     .nav_bar {
         /* border: 2px solid red; */
-        padding-right: 80px;
+        padding-right: 5vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 15px;
-        margin-top: 5px;
+        gap: 1vw;
+        margin-top: 0.5vw;
 
         hr {
-            height: 20px;
+            height: 1.5vw;
             /* width: 20px; */
-            border: 2px solid #40444c;
-            border-radius: 10px;
+            border: 0.2vw solid #40444c;
+            border-radius: 1vw;
             color: #40444c;
             background-color: #40444c;
         }
@@ -95,14 +95,14 @@
 
 .nav .nav_diff {
     display: flex;
-    gap: 10px;
+    gap: 1vw;
     align-items: center;
     color: #7982d1;
 }
 
 .nav ul {
     display: flex;
-    gap: 40px;
+    gap: 4vw;
     list-style: none;
 }
 
@@ -113,51 +113,60 @@
 
     .wire_1 {
         position: absolute;
-        top: -58px;
-        left: -300px;
+        top: -3.6vw;
+        left: -20vw;
         z-index: 2;
+        height: 5vw;
     }
 
     .wire_2 {
         position: absolute;
-        top: -25px;
-        left: -125px;
+        top: -1.6vw;
+        left: -8vw;
         transform: rotate(20deg);
         /* height: 80px; */
         z-index: 2;
+        
+        height: 3.3vw;
     }
 
     .wire_3{
         position: absolute;
-        top: -45px;
-        left: -140px;
+        top: -3vw;
+        left: -8.8vw;
         transform: rotate(-5deg);
-        z-index: 2;
+        z-index: 1;
+        
+        height: 3.3vw;
     }
 
     .wire_4 {
         position: absolute;
-        top: -58px;
-        left: -270px;
+        top: -3.5vw;
+        left: -17.5vw;
         z-index: 1;
+        
+        height: 4.5vw;
     }
 
     .wire_5 {
         position: absolute;
-        top: -35px;
-        left: -85px;
+        top: -2vw;
+        left: -6vw;
         transform: rotate(-5deg);
+        
+        height: 1.6vw;
     }
 }
 
 .button_bg {
     background-color: #272a2c;
-    margin-top: 20px;
-    margin-right: 50px;
-    border-radius: 40px;
-    border: 4px solid #000;
+    margin-top: 1.3vw;
+    margin-right: 3vw;
+    border-radius: 4vw;
+    border: 0.3vw solid #000;
     width: fit-content;
-    padding: 6px;
+    padding: 0.4vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,9 +186,9 @@
     top: 20;
     left: 91%;
     transform: translateX(-50%);
-    width: 100px;
+    width: 7vw;
     /* controls center width */
-    height: 30px;
+    height: 1.5vw;
     /* box-shadow: 0 -8px 20px rgba(255, 208, 0, 0.7); */
     box-shadow: 0 0 60px rgba(255, 208, 0, 0.9),
         0 0 0 0 rgba(255, 140, 0, 0.45);
@@ -196,11 +205,11 @@
     position: relative;
     font-family: Komika, sans-serif;
     font-weight: bolder;
-    letter-spacing: 1px;
-    font-size: 18px;
+    letter-spacing: 0.1vw;
+    font-size: 1.2vw;
 
-    padding: 5px 50px;
-    border-radius: 40px;
+    padding: 0.3vw 3vw;
+    border-radius: 4vw;
     border: none;
     /* border: 4px solid #1c1c1c; */
 

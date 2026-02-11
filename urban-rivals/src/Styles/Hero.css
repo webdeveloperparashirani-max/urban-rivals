@@ -1,0 +1,299 @@
+.hero {
+    position: relative;
+    height: 116vh;
+    overflow: hidden;
+    background: black;
+}
+
+/* Shared Layer */
+.layer {
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Background */
+.bg {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    top: -5%;
+    left: -5%;
+    z-index: 1;
+}
+
+/* Characters */
+.char1 {
+    height: 1300px;
+    left: 0%;
+    top: -55%;
+    z-index: 4;
+    transition: transform 0.2s;
+}
+
+.char2 {
+    height: 1300px;
+    right: 5%;
+    top: 10%;
+    z-index: 5;
+    transition: transform 0.2s;
+}
+
+.char3 {
+    height: 700px;
+    right: 2%;
+    top: -3%;
+    z-index: 4;
+    transition: transform 0.2s;
+}
+
+.char4 {
+    height: 800px;
+    left: -6%;
+    top: 5%;
+    z-index: 2;
+    transition: transform 0.2s;
+}
+
+.char-yellow {
+    position: absolute;
+    z-index: 5;
+}
+
+/* Image */
+.char-yellow img {
+    height: 1170px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Glow */
+.char-glow-yellow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #ffff65;
+    filter: blur(120px);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.char-yellow::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 0px;
+    /* background: #ffff65; */
+    border-radius: 50%;
+    filter: blur(150px);
+    top: 30%;
+    left: 35%;
+    z-index: -1;
+    /* box-shadow: 0 0 80px 180px #ffff65; */
+    box-shadow: 0 0 100px 200px #ffff65;
+}
+
+.char-orange {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+/* Image */
+.char-orange img {
+    width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Glow */
+.char-glow-orange {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fd7e14;
+    filter: blur(120px);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.char-orange::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 0px;
+    /* background: #ffff65; */
+    border-radius: 50%;
+    filter: blur(150px);
+    top: 80%;
+    left: 50%;
+    z-index: -1;
+    /* box-shadow: 0 0 80px 180px #ffff65; */
+    box-shadow: 0 0 100px 260px #fd7e14;
+}
+
+/* Wires */
+.wire-blue {
+    top: 80px;
+    left: 20%;
+    width: 200px;
+    z-index: 3;
+}
+
+.wire-red {
+    top: 120px;
+    right: 20%;
+    width: 200px;
+    z-index: 3;
+}
+
+/* Play Button */
+.play-wrapper {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.play-wrapper img {
+    height: 200px;
+}
+
+.play-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    transition: 0.3s;
+    height: 130px;
+    width: 130px;
+    top: 15%;
+    left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .play_icon {
+        /* color: white; */
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+
+.play-wrapper:hover .play-glow {
+    box-shadow: 0 0 40px purple;
+    background: rgba(128, 0, 255, 0.4);
+
+    .play_icon {
+        color: white;
+    }
+}
+
+/* Center Logo */
+/* .center-logo {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+    z-index: 6;
+} */
+
+/* Store Buttons */
+.stores {
+    position: absolute;
+    top: 630px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 12;
+}
+
+.stores img {
+    height: 60px;
+    transition: 0.1s ease-in-out;
+}
+
+.stores img:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+}
+
+/* Bottom V */
+.bottom-v {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    z-index: 20;
+}
+
+
+/* ================= LARGE SCREEN (>1500px) ================= */
+/* @media (min-width: 1538px) {
+
+  .hero {
+    height: 100vh;
+  }
+
+  .char1 {
+    height: 1500px;
+    top: -45%;
+  }
+
+  .char2 {
+    height: 1500px;
+    top: 5%;
+  }
+
+  .char3 {
+    height: 820px;
+    top: 0%;
+  }
+
+  .char4 {
+    height: 950px;
+  }
+
+  .char-yellow img {
+    height: 1350px;
+  }
+
+  .char-orange {
+    width: 600px;
+    top: 40px;
+  }
+
+  .char-orange img {
+    width: 600px;
+  }
+
+  .play-wrapper img {
+    height: 230px;
+  }
+
+  .play-glow {
+    height: 150px;
+    width: 150px;
+  }
+
+  .stores {
+    top: 700px;
+  }
+
+  .stores img {
+    height: 70px;
+  }
+}
+ */

@@ -73,8 +73,19 @@ export default function Footer() {
 
             <div className="footer-light">
                 <p className="copyright">
-                    © <span>Acute Games, Inc.</span> All rights reserved |
-                    <span>Contact us - Terms and Conditions of use - Privacy Policy</span>
+                    <div className="flex">
+                        <div>© <span>Acute Games, Inc.</span> All rights reserved</div>
+                        <div className="hide">|</div>
+                    </div>
+                    <span>
+                        <div className="flex">
+                            <div>Contact us</div>
+                            <div className="hide">-</div>
+                            <div>Terms and Conditions of use</div>
+                            <div className="hide">-</div>
+                            <div>Privacy Policy</div>
+                        </div>
+                    </span>
                 </p>
                 <p className='copy_text'>PEGI 12</p>
             </div>

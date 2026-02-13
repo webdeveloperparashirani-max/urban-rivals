@@ -20,7 +20,7 @@
 
 /* ================= HERO AREA ================= */
 .footer-hero {
-    height: 26vw;
+    height: 30vw;
     position: relative;
     overflow: hidden;
 
@@ -45,11 +45,11 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 34vw;
+    width: 80%;
     height: 100%;
     background: url("/Footer_side.png") no-repeat left bottom;
-    background-size: 235% 235%;
-    background-position: 28% 0%;
+    background-size: 120% 235%;
+    background-position: 100.5% 0%;
     z-index: 2;
     pointer-events: none;
 }
@@ -90,10 +90,10 @@
 /* TITLE */
 .start-title {
     color: #ffcc00;
-    font-size: 2.5vw;
+    font-size: 2.1vw;
     font-weight: 900;
-    text-shadow: 0 0.3vw 0.9vw black;
-    margin-top: -6vw;
+    text-shadow: 0 0.3vw -1vw black;
+    margin-top: -7vw;
     font-weight: bolder;
     font-family: "Hauser", serif;
     filter: drop-shadow(0 4px 0 #3a3b42) drop-shadow(0 -4px 0 #3a3b42) drop-shadow(-4px 0 0 #3a3b42) drop-shadow(4px 0 0 #3a3b42);
@@ -107,7 +107,7 @@
 }
 
 .platforms img {
-    height: 3.2vw;
+    height: 4vw;
     border-radius: 0.9vw;
     transition: 0.3s ease-in-out;
 }
@@ -121,7 +121,7 @@
     display: flex;
     gap: 0.8vw;
     align-items: center;
-    padding: 0.8vw 2vw;
+    padding: 0.5vw 2vw;
     border-radius: 2.5vw;
     border: 0.4vw solid #0b0d10;
     font-weight: bold;
@@ -181,7 +181,7 @@
 .social-icons .inner-icon {
     display: flex;
     justify-content: center;
-    gap: 1vw;
+    gap: 0.5vw;
 }
 
 /* ================= LIGHT FOOTER ================= */
@@ -195,54 +195,235 @@
 .footer-light .copyright {
     font-size: 1.1vw;
     color: #888;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    .flex {
+        display: flex;
+        gap: 10px;
+    }
 }
 
 .footer-light .copyright span {
     color: #ffcc00;
 }
 
-.copy_text{
+.copy_text {
     font-size: 1.1vw;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
+
     .footer-hero {
-        height: 420px;
+        height: 46vw;
+
+        background-size: 120% 115%;
+        background-position: 50% 100%;
+        /* background-repeat: no-repeat; */
     }
 
     .footer-hero::before {
-        width: 320px;
-        opacity: 0.8;
+        width: 60vw;
+        background-size: 160% 160%;
+        left: -120px;
+        bottom: 0;
+        /* opacity: 0.7; */
+        height: 100%;
     }
 
+    /* .footer-hero::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 34vw;
+        height: 100%;
+        background: url("/Footer_side.png") no-repeat left bottom;
+        background-size: 235% 235%;
+        background-position: 28% 0%;
+        z-index: 2;
+        pointer-events: none;
+    } */
+
     .start-title {
-        font-size: 34px;
+        font-size: 3.5vw;
+        margin-top: -8vw;
     }
 
     .platforms img {
-        height: 45px;
+        height: 5vw;
+    }
+
+    .discord-btn {
+        margin-top: 10vw;
+        font-size: 2.5vw;
+        padding: 1vw 3vw;
     }
 
     .games-logo {
-        height: 70px;
-        margin-top: -80px;
+        height: 8vw;
+        margin-top: -10vw;
+    }
+
+    .social-icons {
+        font-size: 3vw;
+        gap: 10vw;
+    }
+
+    .footer-light .copyright,
+    .copy_text {
+        font-size: 1.5vw;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+    /* .footer-hero {
+        padding: 18vw 5vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    } */
+
+    .footer-hero {
+        height: 90vw;
+        background-size: 130% 135%;
+        background-position: 50% 100%;
+    }
+
     .footer-hero::before {
-        display: none;
-        /* hide girl on mobile */
+        width: 60vw;
+        background-size: 220% 130%;
+        left: -85px;
+        bottom: 0;
+        /* opacity: 0.7; */
+        height: 100%;
+    }
+
+    .start-title {
+        font-size: 4vw;
     }
 
     .platforms {
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
+        gap: 0.5vw;
+    }
+
+    .platforms img {
+        height: 8vw;
+    }
+
+    .discord-btn {
+        font-size: 2.5vw;
+        padding: 2vw 5vw;
     }
 
     .social-icons {
-        gap: 40px;
-        font-size: 22px;
+        /* flex-direction: column; */
+        gap: 10vw;
+        font-size: 4vw;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .games-logo {
+        height: 10vw;
+        margin-top: -10vw;
+    }
+
+    .footer-light .copyright,
+    .copy_text {
+        font-size: 2vw;
+    }
+
+    .footer-light .copyright {
+        flex-direction: column;
+        gap: 2px;
+
+        .flex {
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+
+    .copy_text {
+        margin-top: -10px;
+    }
+
+    .discord-btn {
+        padding: 1.3vw 4vw;
+        border-radius: 4.5vw;
+        border: 0.8vw solid #0b0d10;
+        margin-top: 8vw;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-hero {
+        height: 230vw;
+        background-size: 400% 400%;
+        background-position: 20% 50%;
+    }
+
+    .footer-hero::before {
+        width: 120%;
+        background-size: 240% 100%;
+        left: -45px;
+        bottom: 0;
+        /* opacity: 0.7; */
+        height: 100%;
+    }
+
+    .start-title {
+        font-size: 10vw;
+    }
+
+    .platforms {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1vw;
+    }
+
+    .platforms img {
+        height: 18vw;
+    }
+
+    .discord-btn {
+        font-size: 5.5vw;
+        padding: 5vw 10vw;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 8vw;
+        font-size: 7vw;
+        padding-bottom: 20px;
+    }
+
+    .games-logo {
+        height: 25vw;
+        margin-top: -15vw;
+    }
+
+    .footer-light .copyright,
+    .copy_text {
+        font-size: 4vw;
+    }
+
+    .discord-btn {
+        padding: 3.5vw 9vw;
+        border-radius: 9.5vw;
+        border: 2vw solid #0b0d10;
+        margin-top: 25vw;
     }
 }

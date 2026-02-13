@@ -22,36 +22,84 @@ const data = [
 export default function Card() {
   const cardsRef = useRef([]);
 
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add("show");
+  //         } else {
+  //           entry.target.classList.remove("show");
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.2 }
+  //   );
+
+  //   cardsRef.current.forEach((el) => observer.observe(el));
+
+  //   // ===== PARALLAX SCROLL EFFECT =====
+  //   const handleScroll = () => {
+  //     cardsRef.current.forEach((card, i) => {
+  //       if (!card) return;
+
+  //       const rect = card.getBoundingClientRect();
+  //       const windowHeight = window.innerHeight;
+
+  //       // how much card is inside screen
+  //       const visible = windowHeight - rect.top;
+
+  //       // parallax strength
+  //       // const move = visible * 0.08 * (i + 1);
+  //       const move = visible * 0.08 * (cardsRef.current.length - i);
+
+  //       card.style.transform = `translateY(${Math.max(
+  //         0,
+  //         150 - move
+  //       )}px)`;
+  //     });
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+    const cards = cardsRef.current.filter(Boolean);
+    if (!cards.length) return;
 
-    cardsRef.current.forEach((el) => observer.observe(el));
+    const isMobile = window.matchMedia("(max-width: 1024px)").matches;
 
-    // ===== PARALLAX SCROLL EFFECT =====
+    let observer;
+
+    // ===== INTERSECTION OBSERVER =====
+    if (!isMobile) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      cards.forEach((el) => observer.observe(el));
+    } else {
+      // Mobile → always visible
+      cards.forEach((el) => el.classList.add("show"));
+    }
+
+    // ===== PARALLAX SCROLL =====
     const handleScroll = () => {
-      cardsRef.current.forEach((card, i) => {
-        if (!card) return;
+      if (window.matchMedia("(max-width: 768px)").matches) return;
 
+      cards.forEach((card, i) => {
         const rect = card.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // how much card is inside screen
-        const visible = windowHeight - rect.top;
-
-        // parallax strength
-        // const move = visible * 0.08 * (i + 1);
-        const move = visible * 0.08 * (cardsRef.current.length - i);
+        const visible = window.innerHeight - rect.top;
+        const move = visible * 0.08 * (cards.length - i);
 
         card.style.transform = `translateY(${Math.max(
           0,
@@ -60,10 +108,13 @@ export default function Card() {
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (!isMobile) {
+      window.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (observer) observer.disconnect();
     };
   }, []);
 

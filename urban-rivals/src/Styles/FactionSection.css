@@ -265,7 +265,7 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .faction {
         flex-direction: column;
         height: auto;
@@ -292,5 +292,342 @@ body {
 
     .slider-controls {
         bottom: 20px;
+    }
+} */
+
+
+/* @media (max-width: 1024px) {
+
+    .reveal-left,
+    .reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .faction {
+        flex-direction: column;
+        height: auto;
+        padding: 6vw 5vw 14vw;
+        position: relative;
+        overflow: hidden;
+
+        background-image: none;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .faction-left,
+    .faction-middle,
+    .faction-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .faction-left h1 {
+        font-size: 7vw;
+    }
+
+    .faction-left p,
+    .faction-middle p {
+        font-size: 2vw;
+        max-width: 100%;
+        color: white;
+    }
+
+    .faction-middle {
+        padding-top: 4vw;
+    }
+
+    .faction-middle h2 {
+        font-size: 6vw;
+    }
+
+    .faction-middle .label {
+        font-size: 3vw;
+    }
+
+    .faction-right {
+        position: absolute;
+        right: -4vw;
+        bottom: 10vw;
+        width: 70vw;
+        height: auto;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .slide-image {
+        height: 100%;
+        width: auto;
+        opacity: 0.85;
+    }
+
+    .faction::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right,
+                rgba(10, 10, 12, 0.95) 20%,
+                rgba(10, 10, 12, 0.6) 50%,
+                rgba(10, 10, 12, 0.2) 80%);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .slider-controls {
+        bottom: 4vw;
+    }
+} */
+
+@media (max-width: 1024px) {
+    .faction {
+        position: relative;
+        overflow: hidden;
+
+        background-image: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .faction {
+        flex-direction: column;
+        height: auto;
+        padding: 6vw 5vw 14vw;
+        position: relative;
+        overflow: hidden;
+
+        background-image: none;
+    }
+
+    .reveal-left,
+    .reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .faction-left,
+    .faction-middle,
+    .faction-right {
+        width: 100%;
+        margin-left: -10px;
+    }
+
+    .faction {
+        padding: 10vw 5vw 20vw;
+        background-size: 100% 100%, 100% 100%, 100% 60%;
+    }
+
+    .faction-left {
+        flex-direction: column;
+    }
+
+    .faction-left hr {
+        display: none;
+    }
+
+    .faction-left h1 {
+        font-size: 5vw;
+    }
+
+    .faction-left p {
+        font-size: 2.4vw;
+        line-height: 3vw;
+        max-width: 100%;
+        color: white;
+    }
+
+    .faction-middle {
+        padding-top: 6vw;
+    }
+
+    .faction-middle .label {
+        font-size: 3vw;
+    }
+
+    .faction-middle h2 {
+        font-size: 5vw;
+        margin-top: -20px;
+    }
+
+    .faction-middle p {
+        line-height: 3vw;
+        font-size: 2.4vw;
+        max-width: 100%;
+        color: white;
+    }
+
+    .faction-right {
+        margin-top: 8vw;
+    }
+
+    /* .slide-image {
+        width: 85vw;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
+    } */
+
+
+    .faction-right {
+        position: absolute;
+        right: -4vw;
+        bottom: 20vw;
+        width: 70vw;
+        height: auto;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .slide-image {
+        height: 100%;
+        width: auto;
+        opacity: 0.85;
+        /* highlight only */
+        /* filter: blur(1px) brightness(0.8); */
+    }
+
+    .faction::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right,
+                rgba(10, 10, 12, 0.95) 20%,
+                rgba(10, 10, 12, 0.6) 50%,
+                rgba(10, 10, 12, 0.2) 80%);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .slider-controls {
+        bottom: 5vw;
+        gap: 4vw;
+    }
+
+    .arrow .inner_arrow {
+        padding: 2vw;
+        font-size: 2vw;
+    }
+
+    .dots span {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .faction {
+        position: relative;
+        overflow: hidden;
+
+        background-image: none;
+    }
+
+    .reveal-left,
+    .reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .faction-left,
+    .faction-middle,
+    .faction-right {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .faction-left h1 {
+        font-size: 12vw;
+        z-index: 2;
+    }
+
+    .faction-middle .label {
+        font-size: 7vw;
+    }
+
+    .faction-middle h2 {
+        font-size: 12vw;
+        z-index: 2;
+    }
+
+    .faction-left p,
+    .faction-middle p {
+        color: white;
+        font-size: 5.4vw;
+        line-height: 6.5vw;
+        font-weight: 500;
+    }
+
+    .faction-left,
+    .faction-middle {
+        position: relative;
+        z-index: 3;
+    }
+
+    /* .faction-right {
+        z-index: 1;
+    }
+
+    .slide-image {
+        width: 92vw;
+        z-index: -1;
+        opacity: 50%;
+        margin-top: -180vw;
+    } */
+
+    .faction-right {
+        position: absolute;
+        right: -4vw;
+        bottom: 20vw;
+        width: 70vw;
+        height: auto;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .slide-image {
+        height: 100%;
+        width: auto;
+        opacity: 0.85;
+        /* highlight only */
+        /* filter: blur(1px) brightness(0.8); */
+    }
+
+    .faction::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right,
+                rgba(10, 10, 12, 0.95) 20%,
+                rgba(10, 10, 12, 0.6) 50%,
+                rgba(10, 10, 12, 0.2) 80%);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .slider-controls {
+        bottom: 5vw;
+        gap: 4vw;
+    }
+
+    .arrow {
+        padding: 1vw;
+    }
+
+    .arrow .inner_arrow {
+        padding: 4vw;
+        font-size: 3vw;
+    }
+
+    .dots span {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .dots {
+        gap: 2vw;
     }
 }

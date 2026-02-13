@@ -25,7 +25,7 @@
 .char1 {
     /* height: 1300px; */
     height: 80vw;
-    left: 0%;
+    left: 2%;
     top: -48%;
     z-index: 4;
     transition: transform 0.2s;
@@ -34,7 +34,7 @@
 .char2 {
     /* height: 1300px; */
     height: 88vw;
-    right: 5%;
+    right: 8%;
     top: 10%;
     z-index: 5;
     transition: transform 0.2s;
@@ -52,8 +52,8 @@
 .char4 {
     /* height: 800px; */
     height: 52vw;
-    left: -6%;
-    top: 4%;
+    left: -4.5%;
+    top: 3%;
     z-index: 2;
     transition: transform 0.2s;
 }
@@ -91,7 +91,7 @@
 .char-yellow::before {
     content: "";
     position: absolute;
-    width: 5vw ;
+    width: 5vw;
     height: 0px;
     /* background: #ffff65; */
     border-radius: 50%;
@@ -124,8 +124,8 @@
     position: absolute;
     top: 50%;
     left: 100%;
-    width: 4vw;
-    height: 4vw;
+    width: 1vw;
+    height: 1vw;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: #fd7e14;
@@ -137,23 +137,23 @@
 .char-orange::before {
     content: "";
     position: absolute;
-    width: 5vw;
-    height: 5px;
+    width: 2vw;
+    height: 2vw;
     /* background: #ffff65; */
     border-radius: 50%;
-    filter: blur(12vw);
-    top: 80%;
-    left: 50%;
+    filter: blur(8vw);
+    top: 90%;
+    left: 40%;
     z-index: -1;
     /* box-shadow: 0 0 80px 180px #ffff65; */
-    box-shadow: 0 0 9vw 17vw #fd7e14;
+    box-shadow: 0 0 5vw 12vw #fd7e14;
 }
 
 
 /* Play Button */
 .play-wrapper {
     position: absolute;
-    top: 57%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -218,7 +218,7 @@
 .stores img {
     height: 4vw;
     transition: 0.1s ease-in-out;
-    
+
 }
 
 .stores img:hover {
@@ -226,60 +226,62 @@
     transition: 0.1s ease-in-out;
 }
 
-/* ================= LARGE SCREEN (>1500px) ================= */
-/* @media (min-width: 1538px) {
 
-  .hero {
-    height: 100vh;
-  }
 
-  .char1 {
-    height: 1500px;
-    top: -45%;
-  }
+@media (max-width: 700px) {
 
-  .char2 {
-    height: 1500px;
-    top: 5%;
-  }
+    .hero {
+        height: 100vh;
+        min-height: 600px;
+    }
 
-  .char3 {
-    height: 820px;
-    top: 0%;
-  }
+    /* CHARACTERS SMALLER */
+    .char1,
+    .char2,
+    .char3,
+    .char4 {
+        display: none;
+    }
 
-  .char4 {
-    height: 950px;
-  }
+    /* LOGO CENTER */
+    .char-orange {
+        display: none;
+    }
 
-  .char-yellow img {
-    height: 1350px;
-  }
+    /* PLAY BUTTON */
 
-  .char-orange {
-    width: 600px;
-    top: 40px;
-  }
+    .play-wrapper {
+        margin-top: -200px;
+        margin-left: 10px;
+    }
 
-  .char-orange img {
-    width: 600px;
-  }
+    .play-wrapper img {
+        height: 60vw;
+    }
 
-  .play-wrapper img {
-    height: 230px;
-  }
+    .play-glow {
+        height: 20vw;
+        width: 20vw;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
 
-  .play-glow {
-    height: 150px;
-    width: 150px;
-  }
+        .play_icon {
+            font-size: 8vw;
+            margin-left: 20.8vw;
+            margin-top: 20vw;
+        }
+    }
 
-  .stores {
-    top: 700px;
-  }
+    /* STORE BUTTONS STACK */
+    .stores {
+        top: 45vh;
+        flex-direction: column;
+        gap: 5px;
+    }
 
-  .stores img {
-    height: 70px;
-  }
+    .stores img {
+        height: 55px;
+        margin-left: 10px;
+    }
 }
- */

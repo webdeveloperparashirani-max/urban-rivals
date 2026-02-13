@@ -5,6 +5,10 @@
     font-style: italic;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -126,17 +130,17 @@
         transform: rotate(20deg);
         /* height: 80px; */
         z-index: 2;
-        
+
         height: 3.3vw;
     }
 
-    .wire_3{
+    .wire_3 {
         position: absolute;
         top: -3vw;
         left: -8.8vw;
         transform: rotate(-5deg);
         z-index: 1;
-        
+
         height: 3.3vw;
     }
 
@@ -145,7 +149,7 @@
         top: -3.5vw;
         left: -17.5vw;
         z-index: 1;
-        
+
         height: 4.5vw;
     }
 
@@ -154,7 +158,7 @@
         top: -2vw;
         left: -6vw;
         transform: rotate(-5deg);
-        
+
         height: 1.6vw;
     }
 }
@@ -254,4 +258,235 @@
         inset 0 -4px 0 #990099,
         0 2px 0 #1a1a1a,
         0 0 12px #ff00ff88; */
+}
+
+.menu-btn,
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    /* .header {
+        height: 60px;
+        align-items: center;
+        gap: 0;
+    } */
+
+    .header-left {
+        background: none;
+        padding: 8px 12px;
+        margin-left: 20px;
+        background: none;
+    }
+
+    .header-left img {
+        height: 40px;
+    }
+
+    .header-right {
+        background: none;
+        padding-left: 0;
+    }
+
+    .nav {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    /* HIDE DESKTOP NAV */
+    .nav_bar,
+    .wire,
+    .button_bg {
+        display: none;
+    }
+
+    .nav_bar li {
+        display: none;
+    }
+    .nav_bar hr {
+        display: none;
+    }
+
+    /* HAMBURGER ICON */
+    /* .nav::after {
+        content: "☰";
+        font-size: 28px;
+        color: #ffd400;
+        margin-right: 16px;
+        cursor: pointer;
+    } */
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #ffd400;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background: #ffc400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: 0.4s ease;
+        z-index: 999;
+    }
+
+    .mobile-menu.active {
+        transform: translateY(0);
+    }
+
+    .close-btn {
+        position: fixed;
+        top: 0px;
+        right: -10px;
+        font-size: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    .mobile-menu nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-family: Komika;
+        font-weight: bold;
+
+        a {
+            color: black;
+        }
+
+        .discord {
+            display: flex;
+            gap: 1vw;
+            align-items: center;
+            color: #7982d1;
+        }
+    }
+
+
+    .button_bg_mobile {
+        background-color: #272a2c;
+        margin-top: 10vw;
+        margin-left: 0vw;
+        border-radius: 8vw;
+        border: 0.7vw solid #000;
+        /* margin-left: 5vw;
+        border: 1.5vw solid #000; */
+        width: fit-content;
+        padding: 0.4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.15s ease;
+        z-index: 1;
+        overflow: hidden;
+        /* box-shadow: 0 0 80px rgba(255, 208, 0, 0.8),
+        0 0 0 0 rgba(255, 140, 0, 0.45); */
+
+        /* box-shadow: 0 -10px 20px -5px rgba(255, 208, 0, 0.75); */
+        /* box-shadow: 0 -8px 25px rgba(255, 208, 0, 0.7); */
+    }
+
+    .button_bg_mobile::before {
+        content: "";
+        position: absolute;
+        top: 20;
+        left: 91%;
+        transform: translateX(-50%);
+        width: 7vw;
+        /* controls center width */
+        height: 1.5vw;
+        /* box-shadow: 0 -8px 20px rgba(255, 208, 0, 0.7); */
+        box-shadow: 0 0 60px rgba(255, 208, 0, 0.9),
+            0 0 0 0 rgba(255, 140, 0, 0.45);
+        pointer-events: none;
+        background: none;
+        z-index: -1;
+    }
+
+    .button_bg_mobile:hover::before {
+        box-shadow: none;
+    }
+
+    .play-top-mobile {
+        position: relative;
+        font-family: Komika, sans-serif;
+        font-weight: bolder;
+        letter-spacing: 0.1vw;
+        font-size: 3.2vw;
+
+        padding: 1vw 10vw;
+        /* font-size: 5.2vw; 
+        padding: 3vw 18vw; */
+        border-radius: 8vw;
+        border: none;
+        /* border: 4px solid #1c1c1c; */
+
+        color: #2b2b2b;
+        cursor: pointer;
+        z-index: 2;
+
+        /* Yellow Gradient */
+        background: linear-gradient(to bottom,
+                #fff799 0%,
+                #ffd900 40%,
+                #ffbf00 60%,
+                #ffe066 100%);
+
+        /* 3D Look */
+        /* box-shadow:
+        inset 0 2px 0 #ffffffaa,
+        inset 0 -4px 0 #c48a00,
+        0 2px 0 #1a1a1a,
+        0 0 12px #ffd400; */
+
+        transition: all 0.15s ease;
+    }
+
+    .button_bg_mobile:hover {
+        transform: scale(1.1);
+    }
+
+    .play-top-mobile:hover {
+        color: white;
+        /* transform: scale(1.1); */
+
+        background: linear-gradient(to bottom,
+                #ffb3ff 0%,
+                #ff33ff 40%,
+                #cc00cc 60%,
+                #ff66ff 100%);
+
+
+        /* box-shadow:
+        inset 0 2px 0 #ffffffaa,
+        inset 0 -4px 0 #990099,
+        0 2px 0 #1a1a1a,
+        0 0 12px #ff00ff88; */
+    }
+}
+
+@media (max-width: 480px) {
+    .button_bg_mobile {
+        font-size: 5.2vw;
+        padding: 3vw 18vw;
+    }
+
+    .play-top-mobile {
+        font-size: 5.2vw;
+        padding: 3vw 18vw;
+    }
 }

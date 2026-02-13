@@ -382,6 +382,70 @@ body {
     }
 } */
 
+@media (min-width: 1780px) and (max-width: 1980px) {
+    .faction {
+        height: 42vw;
+    }
+
+    .faction-left {
+        /* border: 2px solid red; */
+        padding-left: 150px;
+
+        h1 {
+            font-size: 4.6vw;
+        }
+
+        p {
+            width: 81%;
+            font-size: 1vw;
+        }
+
+        hr {
+            border: 0.1vw solid #393b40;
+            margin-top: 4vw;
+            margin-left: -4.5vw;
+        }
+    }
+
+    .faction-middle {
+        padding-top: 3.6vw;
+        margin-left: 0vw;
+        /* border: 2px solid blue; */
+
+        .label {
+            font-size: 1.2vw;
+        }
+
+        h2 {
+            font-size: 2.8vw;
+        }
+
+        p {
+            width: 81%;
+            font-size: 1vw;
+            line-height: 1.5;
+        }
+    }
+
+    .faction-right {
+        /* border: 2px solid yellow; */
+
+        .slide-image {
+            height: 143%;
+            margin-top: -1vw;
+            margin-left: -350px;
+        }
+    }
+
+    .slider-controls {
+        margin-left: -100px;
+    }
+
+    .arrow {
+        border: 0.2vw solid #000;
+    }
+}
+
 @media (max-width: 1024px) {
     .faction {
         position: relative;

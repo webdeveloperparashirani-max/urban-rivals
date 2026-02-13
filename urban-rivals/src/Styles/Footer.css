@@ -215,6 +215,48 @@
 }
 
 /* ================= RESPONSIVE ================= */
+@media (min-width: 1780px) and (max-width: 1980px) {
+    .footer-hero {
+        height: 25vw;
+    }
+
+    .footer-hero::before {
+        background-size: 101% 235%;
+        background-position: 1500.5% 0%;
+    }
+
+    .start-title {
+        font-size: 2vw;
+    }
+
+    .platforms img {
+        height: 3vw;
+    }
+
+    .discord-btn {
+        padding: 0.5vw 1vw;
+        border-radius: 2.5vw;
+        border: 0.4vw solid #0b0d10;
+        font-size: 1.3vw;
+    }
+
+    .games-logo {
+        height: 4.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .social-icons {
+        font-size: 1.5vw;
+        gap: 5vw;
+        margin-top: -1vw;
+    }
+
+    .footer-light .copyright,
+    .footer-light .copy_text {
+        font-size: 0.8vw;
+    }
+}
+
 @media (max-width: 1024px) {
 
     .footer-hero {

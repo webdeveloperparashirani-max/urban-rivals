@@ -215,7 +215,7 @@
 }
 
 /* ================= RESPONSIVE ================= */
-@media (min-width: 1780px) and (max-width: 1980px) {
+@media (min-width: 1980px) {
     .footer-hero {
         height: 25vw;
     }

@@ -313,7 +313,8 @@ body {
     }
 
     .nav {
-        font-size: 19px;
+        /* font-size: 19px; */
+        font-size: 0.9vw;
         /* font-size: 0.9vw; */
         font-weight: bolder;
 

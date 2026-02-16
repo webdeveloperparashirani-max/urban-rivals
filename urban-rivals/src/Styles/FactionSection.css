@@ -400,8 +400,10 @@ body {
         }
 
         p {
-            width: 79%;
-            font-size: 18.5px;
+            width: 74%;
+            /* font-size: 18.5px; */
+            font-size: 0.9vw;
+            /* border: 2px solid red; */
         }
 
         hr {

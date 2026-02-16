@@ -272,7 +272,8 @@
       }
 
       p {
-        font-size: 18.6px;
+        /* font-size: 18.6px; */
+        font-size: 0.96vw;
         line-height: 1.4vw;
         margin-top: -10px;
       }
@@ -296,6 +297,8 @@
     background-size: 220% 100%;
     background-position: center;
     margin-top: -220px;
+    padding-top: 5vw;
+    padding-bottom: 25vw;
   }
 
   .cards-wrapper {
@@ -349,6 +352,8 @@
     background-size: 750% 130%;
     background-position: center;
     margin-top: -110px;
+    padding-top: 5vw;
+    padding-bottom: 60vw;
   }
 
   .feature-card {

@@ -222,15 +222,19 @@
 
     .footer-hero::before {
         background-size: 101% 235%;
-        background-position: 1500.5% 0%;
+        background-position: 1650.5% 0%;
     }
 
     .start-title {
         font-size: 2vw;
     }
 
+    .platforms {
+        gap: 1vw;
+    }
+
     .platforms img {
-        height: 3vw;
+        height: 3.3vw;
     }
 
     .discord-btn {

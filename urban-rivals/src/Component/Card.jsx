@@ -67,6 +67,8 @@ export default function Card() {
   //   };
   // }, []);
 
+  const sectionRef = useRef(null);
+
   useEffect(() => {
     const cards = cardsRef.current.filter(Boolean);
     if (!cards.length) return;
@@ -93,12 +95,46 @@ export default function Card() {
     }
 
     // ===== PARALLAX SCROLL =====
+    // const handleScroll = () => {
+    //   if (window.matchMedia("(max-width: 768px)").matches) return;
+
+    //   cards.forEach((card, i) => {
+    //     const rect = card.getBoundingClientRect();
+    //     const visible = window.innerHeight - rect.top;
+    //     const move = visible * 0.08 * (cards.length - i);
+
+    //     card.style.transform = `translateY(${Math.max(
+    //       0,
+    //       150 - move
+    //     )}px)`;
+    //   });
+    // };
+
     const handleScroll = () => {
       if (window.matchMedia("(max-width: 768px)").matches) return;
+      if (!sectionRef.current) return;
+
+      const viewportHeight = window.innerHeight;
+      const rect = sectionRef.current.getBoundingClientRect();
+
+      const sectionCenter = rect.top + rect.height / 2;
+
+      const topLimit = viewportHeight * 0.4;
+      const bottomLimit = viewportHeight * 0.7;
+
+      const inCenterZone =
+        sectionCenter > topLimit && sectionCenter < bottomLimit;
 
       cards.forEach((card, i) => {
-        const rect = card.getBoundingClientRect();
-        const visible = window.innerHeight - rect.top;
+        if (inCenterZone) {
+          // CENTER → STRAIGHT LINE
+          card.style.transform = "translateY(0px)";
+          return;
+        }
+
+        // OUTSIDE CENTER → PARALLAX
+        const cardRect = card.getBoundingClientRect();
+        const visible = viewportHeight - cardRect.top;
         const move = visible * 0.08 * (cards.length - i);
 
         card.style.transform = `translateY(${Math.max(
@@ -119,7 +155,7 @@ export default function Card() {
   }, []);
 
   return (
-    <section className="feature-section">
+    <section className="feature-section" ref={sectionRef}>
       <div className="center-glow"></div>
 
       <div className="cards-wrapper">
